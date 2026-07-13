@@ -1,0 +1,36 @@
+name: Nate Economy News to Slack
+
+# 매일 아침 09:00 KST 에 네이트 경제뉴스 TOP 10 을 Slack 으로 전송한다.
+# GitHub Actions 의 cron 은 항상 UTC 기준이다.
+#   0 0 * * *  ==  매일 00:00 UTC  ==  09:00 KST (KST = UTC+9)
+# 참고: GitHub 예약 워크플로우는 러너 부하에 따라 수 분~수십 분 지연될 수 있다.
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # 00:00 UTC = 09:00 KST
+  workflow_dispatch: {}    # 수동 실행 지원
+
+# 동시 실행 방지 (예약과 수동 실행이 겹치는 경우)
+concurrency:
+  group: nate-econ-news
+  cancel-in-progress: false
+
+jobs:
+  send-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Scrape Nate economy news and post to Slack
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: python scripts/nate_econ_news.py
