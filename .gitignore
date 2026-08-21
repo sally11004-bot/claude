@@ -1,0 +1,8 @@
+# Kakao credentials — never commit
+kakao_config.json
+.claude/**/kakao_config.json
+*.kakao.json
+
+# Python
+__pycache__/
+*.pyc
