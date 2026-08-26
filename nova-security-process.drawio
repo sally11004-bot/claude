@@ -1,0 +1,129 @@
+<mxfile host="app.diagrams.net" agent="Claude" version="24.0.0">
+  <diagram id="nova-sec-process" name="NOVA 보안 중앙 관리 체계">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ===== TITLE ===== -->
+        <mxCell id="title" value="NOVA 보안 중앙 관리 체계 &#8211; 이상징후 탐지 &#8594; 대응 프로세스" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Georgia;fontSize=22;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="60" y="30" width="1000" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="AWS GuardDuty 탐지 &#8594; SKT 보안 관제 센터 &#8594; Jira 티켓 &#8594; NOVA 보안 담당자 확인·판단·조치" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=13;fontColor=#7D7D7D;" vertex="1" parent="1">
+          <mxGeometry x="62" y="70" width="1000" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- ===== STAGE BANDS (background) ===== -->
+        <mxCell id="band1" value="1. 탐지 &amp; 관제 (Detection)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#EAEAEA;verticalAlign=top;align=left;fontFamily=Arial;fontSize=12;fontStyle=1;fontColor=#464646;spacingLeft=12;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="60" y="120" width="1180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="band2" value="2. 티켓 발행 (Ticketing)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#EAEAEA;verticalAlign=top;align=left;fontFamily=Arial;fontSize=12;fontStyle=1;fontColor=#464646;spacingLeft=12;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="60" y="260" width="1180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="band3" value="3. 확인 (Triage)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#EAEAEA;verticalAlign=top;align=left;fontFamily=Arial;fontSize=12;fontStyle=1;fontColor=#464646;spacingLeft=12;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="60" y="390" width="1180" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="band4" value="4. 판단 &amp; 조치 (Decision &amp; Resolution)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#EAEAEA;verticalAlign=top;align=left;fontFamily=Arial;fontSize=12;fontStyle=1;fontColor=#464646;spacingLeft=12;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="60" y="700" width="1180" height="360" as="geometry" />
+        </mxCell>
+
+        <!-- ===== BAND 1: DETECTION ===== -->
+        <mxCell id="n1" value="&lt;b&gt;AWS GuardDuty&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px;&quot;&gt;NOVA 대상 이상징후 탐지&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=13;fontColor=#000000;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="150" width="270" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" value="&lt;b&gt;SKT 보안 관제 센터 (SOC)&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px;&quot;&gt;이상징후 관제·분석&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=13;fontColor=#000000;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="770" y="150" width="270" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ===== BAND 2: TICKETING ===== -->
+        <mxCell id="n3" value="&lt;b&gt;Jira 티켓 자동 생성&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px;&quot;&gt;이상징후 Jira 노티 발행&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D04A02;strokeWidth=2;fontFamily=Arial;fontSize=13;fontColor=#000000;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="515" y="285" width="270" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- ===== BAND 3: TRIAGE ===== -->
+        <mxCell id="n4" value="&lt;b&gt;NOVA 보안 담당자&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px;&quot;&gt;Jira 이상징후 노티 수신&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=13;fontColor=#000000;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="515" y="415" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" value="&lt;b&gt;티켓 정보 확인&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px;&quot;&gt;IP · 계정 · 발생시간 등 확인&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=13;fontColor=#000000;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="515" y="500" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" value="&lt;b&gt;작업 담당자에게 확인&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px;&quot;&gt;정상 작업 여부 문의&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=13;fontColor=#000000;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="515" y="585" width="270" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== BAND 4: DECISION + BRANCHES ===== -->
+        <mxCell id="d1" value="&lt;b&gt;정상 작업&lt;br&gt;여부?&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#D04A02;strokeColor=#D04A02;fontFamily=Arial;fontSize=13;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="565" y="720" width="170" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- LEFT branch: NORMAL -->
+        <mxCell id="l1" value="&lt;b&gt;정상 작업 (예정된 작업)&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px;&quot;&gt;&#8216;특이사항 없음&#8217; 완결 조치 요청&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7D7D7D;fontFamily=Arial;fontSize=13;fontColor=#000000;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="130" y="745" width="260" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- RIGHT branch: ABNORMAL -->
+        <mxCell id="r1" value="&lt;b&gt;비정상 행위로 판단&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px;&quot;&gt;대응 방안 협의&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0301E;strokeWidth=2;fontFamily=Arial;fontSize=13;fontColor=#000000;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="910" y="730" width="270" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="&lt;b&gt;조치 수행&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px;&quot;&gt;협의된 대응 방안 실행&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=13;fontColor=#000000;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="910" y="825" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="&lt;b&gt;조치 완료까지 추적 관리&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px;&quot;&gt;Tracking &amp; Follow-up&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0301E;strokeWidth=2;fontFamily=Arial;fontSize=13;fontColor=#000000;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="910" y="915" width="270" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- COMMON END -->
+        <mxCell id="end" value="&lt;b&gt;Jira 티켓 완결 (Closed)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#464646;strokeColor=#464646;fontFamily=Arial;fontSize=13;fontColor=#FFFFFF;fontStyle=1;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="515" y="990" width="270" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- ===== EDGES ===== -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontColor=#464646;" edge="1" parent="1" source="n1" target="n2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="이상징후 발생" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontColor=#464646;" edge="1" parent="1" source="n2" target="n3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontColor=#464646;" edge="1" parent="1" source="n3" target="n4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontColor=#464646;" edge="1" parent="1" source="n4" target="n5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontColor=#464646;" edge="1" parent="1" source="n5" target="n6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontColor=#464646;" edge="1" parent="1" source="n6" target="d1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="정상 작업" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#2D2D2D;" edge="1" parent="1" source="d1" target="l1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="비정상 행위" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#E0301E;strokeWidth=2;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#E0301E;" edge="1" parent="1" source="d1" target="r1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#E0301E;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="r1" target="r2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#E0301E;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="r2" target="r3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="완결" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontColor=#464646;" edge="1" parent="1" source="l1" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="완결" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontColor=#464646;" edge="1" parent="1" source="r3" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ===== BUMPER STATEMENT ===== -->
+        <mxCell id="bumper" value="&lt;b&gt;핵심:&lt;/b&gt; 모든 이상징후는 Jira 티켓으로 단일화되어, &#8216;확인 &#8594; 판단 &#8594; 조치 완료&#8217;까지 추적·관리된다." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#2D2D2D;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1080" width="1180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bumperbar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D04A02;strokeColor=#D04A02;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1080" width="6" height="40" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
