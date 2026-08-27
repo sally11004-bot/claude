@@ -1,0 +1,93 @@
+<mxfile host="app.diagrams.net" agent="Claude" version="24.0.0">
+  <diagram id="nova-cspm-process" name="NOVA 보안 중앙 관리 체계 - CSPM">
+    <mxGraphModel dx="900" dy="640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ===== TITLE ===== -->
+        <mxCell id="title" value="NOVA 보안 중앙 관리 체계 &#8211; CSPM 대응 프로세스" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Georgia;fontSize=15;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="30" y="16" width="800" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Near Real-time 지속 분석 &#8594; (Critical) 실시간 메일 Alert·즉각 조치 / (그 외) 분기 정기 진단 &#8594; Wiz 확인·90일 내 조치" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=10;fontColor=#7D7D7D;" vertex="1" parent="1">
+          <mxGeometry x="31" y="40" width="800" height="16" as="geometry" />
+        </mxCell>
+
+        <!-- ===== TOP: DETECTION + BRANCH ===== -->
+        <mxCell id="n1" value="&lt;b&gt;CSPM (Wiz) Near Real-time 지속 분석&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;클라우드 설정 오류·취약점 상시 탐지&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="305" y="80" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" value="&lt;b&gt;취약점&lt;br&gt;심각도?&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#D04A02;strokeColor=#D04A02;fontFamily=Arial;fontSize=10;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="372" y="134" width="106" height="62" as="geometry" />
+        </mxCell>
+
+        <!-- ===== LEFT COLUMN: CRITICAL ===== -->
+        <mxCell id="colL" value="Critical 취약점 · 실시간 대응" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#EAEAEA;verticalAlign=top;align=left;fontFamily=Arial;fontSize=10;fontStyle=1;fontColor=#464646;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="45" y="220" width="375" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="&lt;b&gt;실시간 메일 Alert 발생&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;Critical 취약점 발견 즉시&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0301E;strokeWidth=2;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="142" y="248" width="180" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="&lt;b&gt;담당자 즉각 조치&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;메일 수신 → 신속 대응&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="142" y="312" width="180" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="&lt;b&gt;Remind 메일 발송&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;3일 이상 미완료 시 자동 발송&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EB8C00;strokeWidth=2;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="142" y="376" width="180" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="cnote" value="&#8226; NOVA 보안 담당자: 진행 관리" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=9;fontColor=#7D7D7D;" vertex="1" parent="1">
+          <mxGeometry x="60" y="470" width="345" height="18" as="geometry" />
+        </mxCell>
+
+        <!-- ===== RIGHT COLUMN: REGULAR ===== -->
+        <mxCell id="colR" value="그 외 취약점 · 분기 정기 진단" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#EAEAEA;verticalAlign=top;align=left;fontFamily=Arial;fontSize=10;fontStyle=1;fontColor=#464646;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="430" y="220" width="375" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="g1" value="&lt;b&gt;분기 보안진단 보고서 발송&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;보안진단 담당자 추출 → 메일 발송&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="527" y="248" width="180" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="g2" value="&lt;b&gt;담당자 + NOVA 보안 확인&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;양측 모두 결과 확인&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="527" y="304" width="180" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="g3" value="&lt;b&gt;Wiz 솔루션 접속&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;취약점 상세 정보 확인&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="527" y="358" width="180" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="g4" value="&lt;b&gt;90일 이내 조치 완료&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;기한 내 대응&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D04A02;strokeWidth=2;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="527" y="412" width="180" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="gnote" value="&#8226; NOVA 보안 담당자: 추적 관리" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=9;fontColor=#7D7D7D;" vertex="1" parent="1">
+          <mxGeometry x="445" y="470" width="345" height="18" as="geometry" />
+        </mxCell>
+
+        <!-- ===== CONVERGENCE ===== -->
+        <mxCell id="track" value="&lt;b&gt;NOVA 보안 담당자 진행·추적 관리&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D04A02;strokeWidth=2;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="325" y="548" width="200" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="end" value="&lt;b&gt;조치 완료 / 완결&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#464646;strokeColor=#464646;fontFamily=Arial;fontSize=10;fontColor=#FFFFFF;fontStyle=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="335" y="618" width="180" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===== EDGES ===== -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="n1" target="d1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" value="Critical" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#E0301E;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=9;fontStyle=1;fontColor=#E0301E;" edge="1" parent="1" source="d1" target="c1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" value="그 외 취약점" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=9;fontColor=#464646;" edge="1" parent="1" source="d1" target="g1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="c1" target="c2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" value="3일 이상 미완료" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#EB8C00;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=9;fontColor=#EB8C00;" edge="1" parent="1" source="c2" target="c3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="g1" target="g2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="g2" target="g3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="g3" target="g4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c3" target="track"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="g4" target="track"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e11" value="완결" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=9;fontColor=#464646;" edge="1" parent="1" source="track" target="end"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- ===== BUMPER ===== -->
+        <mxCell id="bumperbar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D04A02;strokeColor=#D04A02;" vertex="1" parent="1">
+          <mxGeometry x="30" y="680" width="5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bumper" value="&lt;b&gt;핵심:&lt;/b&gt; Critical은 실시간 메일·3일 Remind로 즉각 조치, 그 외는 분기 진단·Wiz 확인 후 90일 내 조치 &#8212; 두 경로 모두 NOVA 보안 담당자가 완결까지 추적한다." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#2D2D2D;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="35" y="680" width="785" height="30" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

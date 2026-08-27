@@ -1,0 +1,68 @@
+<mxfile host="app.diagrams.net" agent="Claude" version="24.0.0">
+  <diagram id="nova-ccm-process" name="NOVA 보안 중앙 관리 체계 - CCM">
+    <mxGraphModel dx="900" dy="640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="720" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ===== TITLE ===== -->
+        <mxCell id="title" value="NOVA 보안 중앙 관리 체계 &#8211; CCM 대응 프로세스" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Georgia;fontSize=15;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="30" y="16" width="800" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="분기 보안진단 보고서 &#8594; 담당자·NOVA 보안 확인 &#8594; Wiz 상세 확인 &#8594; 90일 내 조치 완료 &#8594; NOVA 보안 추적 관리" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=10;fontColor=#7D7D7D;" vertex="1" parent="1">
+          <mxGeometry x="31" y="40" width="800" height="16" as="geometry" />
+        </mxCell>
+
+        <!-- ===== STAGE BANDS ===== -->
+        <mxCell id="band1" value="1. 정기 진단 (분기)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#EAEAEA;verticalAlign=top;align=left;fontFamily=Arial;fontSize=10;fontStyle=1;fontColor=#464646;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="30" y="70" width="790" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="band2" value="2. 확인" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#EAEAEA;verticalAlign=top;align=left;fontFamily=Arial;fontSize=10;fontStyle=1;fontColor=#464646;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="30" y="140" width="790" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="band3" value="3. 조치" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#EAEAEA;verticalAlign=top;align=left;fontFamily=Arial;fontSize=10;fontStyle=1;fontColor=#464646;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="30" y="280" width="790" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="band4" value="4. 추적 &amp; 완결" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#EAEAEA;verticalAlign=top;align=left;fontFamily=Arial;fontSize=10;fontStyle=1;fontColor=#464646;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="30" y="360" width="790" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- ===== NODES ===== -->
+        <mxCell id="n1" value="&lt;b&gt;분기 보안진단 결과 보고서 발송&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;보안진단 담당자 추출 → 메일 발송&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D04A02;strokeWidth=2;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="305" y="86" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" value="&lt;b&gt;담당자 + NOVA 보안 모두 확인&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;양측 결과 확인&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="335" y="158" width="180" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" value="&lt;b&gt;Wiz 솔루션 접속&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;취약점 상세 정보 확인&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="335" y="212" width="180" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" value="&lt;b&gt;90일 이내 조치 완료&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;기한 내 대응&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D04A02;strokeWidth=2;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="335" y="296" width="180" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" value="&lt;b&gt;NOVA 보안 담당자 추적 관리&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;Tracking &amp; Follow-up&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0301E;strokeWidth=2;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="335" y="376" width="180" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="end" value="&lt;b&gt;조치 완료 / 완결&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#464646;strokeColor=#464646;fontFamily=Arial;fontSize=10;fontColor=#FFFFFF;fontStyle=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="335" y="430" width="180" height="38" as="geometry" />
+        </mxCell>
+
+        <!-- ===== EDGES ===== -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="n1" target="n2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="n2" target="n3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="n3" target="n4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="n4" target="n5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" value="완결" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=9;fontColor=#464646;" edge="1" parent="1" source="n5" target="end"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- ===== BUMPER ===== -->
+        <mxCell id="bumperbar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D04A02;strokeColor=#D04A02;" vertex="1" parent="1">
+          <mxGeometry x="30" y="640" width="5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bumper" value="&lt;b&gt;핵심:&lt;/b&gt; 매 분기 보안진단 결과를 담당자와 NOVA 보안이 함께 확인하고, Wiz로 상세를 파악해 90일 내 조치 완료까지 추적·관리한다." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#2D2D2D;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="35" y="640" width="785" height="30" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
