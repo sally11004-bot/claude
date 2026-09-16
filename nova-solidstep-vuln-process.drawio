@@ -1,0 +1,92 @@
+<mxfile host="app.diagrams.net" agent="Claude" version="24.0.0">
+  <diagram id="nova-solidstep-vuln" name="SOLIDSTEP 취약점 관리 프로세스">
+    <mxGraphModel dx="1000" dy="720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="880" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ===== TITLE ===== -->
+        <mxCell id="title" value="SOLIDSTEP 진단 후 취약점 관리 프로세스" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Georgia;fontSize=16;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="30" y="14" width="900" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="보안 진단 → (양호/취약) → 현업·보안팀 검토 → 조치불가(예외처리) / 취약관리(단·중·장기) 분류·결재 상신 → 방화벽 오픈 전 특칙 적용" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=10;fontColor=#7D7D7D;" vertex="1" parent="1">
+          <mxGeometry x="31" y="42" width="1130" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="상태 분류: ① 양호   ② 취약   ③ 조치불가   ④ 취약관리(단기/중기/장기)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=10;fontStyle=1;fontColor=#D04A02;" vertex="1" parent="1">
+          <mxGeometry x="31" y="60" width="1130" height="16" as="geometry" />
+        </mxCell>
+
+        <!-- ===== TOP FLOW ===== -->
+        <mxCell id="n1" value="&lt;b&gt;SOLIDSTEP 보안 진단 수행&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=11;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="490" y="88" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" value="&lt;b&gt;진단&lt;br&gt;결과?&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#D04A02;strokeColor=#D04A02;fontFamily=Arial;fontSize=10;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="545" y="144" width="110" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="good" value="&lt;b&gt;양호&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;조치 불요 · 결과 기록/관리&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7D7D7D;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="740" y="150" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" value="&lt;b&gt;현업 · 보안팀 검토&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;취약 항목 검토 후 상태 분류&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="490" y="232" width="220" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" value="&lt;b&gt;상태&lt;br&gt;분류?&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#D04A02;strokeColor=#D04A02;fontFamily=Arial;fontSize=10;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="545" y="294" width="110" height="62" as="geometry" />
+        </mxCell>
+
+        <!-- ===== 조치불가 (LEFT) ===== -->
+        <mxCell id="imp" value="&lt;b&gt;조치불가 (예외처리)&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;&#8226; 기술적/운영상 원천 조치 불가 확인&lt;br&gt;&#8226; 결재: &#39;운영상 조치 불가 항목&#39;&lt;br&gt;&#8226; 증적: 조치 불가능 사유 필요&lt;br&gt;&#8226; 사유 해소 시 상태 변경 가능&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0301E;strokeWidth=2;fontFamily=Arial;fontSize=10;fontColor=#000000;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="60" y="392" width="270" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="impres" value="&lt;b&gt;예외 승인 · 등록&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;결재 상신 → 승인 후 예외 등록 · 주기 재평가&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#DB536A;strokeWidth=1.5;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="602" width="270" height="52" as="geometry" />
+        </mxCell>
+
+        <!-- ===== 취약관리 (RIGHT) ===== -->
+        <mxCell id="vhub" value="&lt;b&gt;취약관리 (기한 내 조치 예정)&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;즉각 조치 곤란 → 단·중·장기 분류&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D04A02;strokeWidth=2;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="680" y="384" width="250" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="sh" value="&lt;b&gt;단기&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;&#8226; 조치 일정: 6개월 이내&lt;br&gt;&#8226; 결재: 취약관리 단기 상신&lt;br&gt;&#8226; 증적: 조치 기간 필요 사유&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D04A02;strokeWidth=2;fontFamily=Arial;fontSize=10;fontColor=#000000;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="440" y="452" width="235" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="mid" value="&lt;b&gt;중기&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;&#8226; 조치 일정: 1년 이내&lt;br&gt;&#8226; 결재: 취약관리 중기 상신&lt;br&gt;&#8226; 증적: EOS 대개체 계획&lt;br&gt;&nbsp;&nbsp;or 조치 계획 필요&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EB8C00;strokeWidth=2;fontFamily=Arial;fontSize=10;fontColor=#000000;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="685" y="452" width="235" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="lng" value="&lt;b&gt;장기&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;&#8226; 조치 일정: 1~3년 이내&lt;br&gt;&#8226; 결재: 취약관리 장기 상신&lt;br&gt;&#8226; 증적: EOS 대개체 계획&lt;br&gt;&nbsp;&nbsp;or 조치 계획 필요&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFB600;strokeWidth=2;fontFamily=Arial;fontSize=10;fontColor=#000000;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="930" y="452" width="235" height="130" as="geometry" />
+        </mxCell>
+
+        <mxCell id="vmres" value="&lt;b&gt;결재 상신 · 승인 → 기한 내 조치&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;승인 후 일정 내 조치 수행 → 조치 완료&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#464646;strokeWidth=1.5;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="602" width="400" height="52" as="geometry" />
+        </mxCell>
+
+        <!-- ===== FIREWALL SPECIAL RULE ===== -->
+        <mxCell id="fwbox" value="방화벽 오픈 전 프로세스 (특칙)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#D04A02;strokeWidth=2;verticalAlign=top;align=left;fontFamily=Arial;fontSize=11;fontStyle=1;fontColor=#D04A02;spacingLeft=10;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="60" y="694" width="1105" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="fw1" value="&lt;b&gt;①&lt;/b&gt; &#39;상(High)&#39; 취약점 미존재 시: &lt;b&gt;조치 일정만큼 버퍼&lt;/b&gt; 부여 후 기간 만료 시 &lt;b&gt;재진단&lt;/b&gt; 진행 (최대 1년 단위 승인 · 취약관리 &lt;b&gt;장기&lt;/b&gt;는 매년 재평가/재진단 필수)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=10;fontColor=#2D2D2D;" vertex="1" parent="1">
+          <mxGeometry x="80" y="728" width="1065" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fw2" value="&lt;b&gt;②&lt;/b&gt; 조치불가 항목: &#39;상&#39; 취약점 미존재 + 업무 필수성 등 &lt;b&gt;객관적 사유 확인&lt;/b&gt; + 보완 통제(EDR · WAF 등) 적용 &lt;b&gt;승인&lt;/b&gt; 시 &lt;b&gt;Open 수행&lt;/b&gt; (연 1회 재평가)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=10;fontColor=#2D2D2D;" vertex="1" parent="1">
+          <mxGeometry x="80" y="772" width="1065" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===== EDGES ===== -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="n1" target="d1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" value="양호" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7D7D7D;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=9;fontColor=#7D7D7D;" edge="1" parent="1" source="d1" target="good"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" value="취약" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D04A02;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=9;fontStyle=1;fontColor=#D04A02;" edge="1" parent="1" source="d1" target="n2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="n2" target="d2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" value="조치불가" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#E0301E;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=9;fontStyle=1;fontColor=#E0301E;" edge="1" parent="1" source="d2" target="imp"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" value="취약관리" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D04A02;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=9;fontStyle=1;fontColor=#D04A02;" edge="1" parent="1" source="d2" target="vhub"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" value="단기" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=9;fontColor=#464646;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="vhub" target="sh"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" value="중기" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=9;fontColor=#464646;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="vhub" target="mid"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" value="장기" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=9;fontColor=#464646;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="vhub" target="lng"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sh" target="vmres"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mid" target="vmres"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="lng" target="vmres"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="imp" target="impres"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
