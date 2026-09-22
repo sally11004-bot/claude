@@ -1,0 +1,86 @@
+<mxfile host="app.diagrams.net" agent="Claude" version="24.0.0">
+  <diagram id="nova-postopen-vuln" name="방화벽 Open 이후 취약점 관리">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="880" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ===== TITLE ===== -->
+        <mxCell id="title" value="방화벽 Open 이후 취약점 관리 프로세스" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Georgia;fontSize=15;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="30" y="16" width="800" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Open 이후 상시 관리 &#8212; SolidStep 연 단위 재점검 &amp; EDR 이상징후 탐지 → 담당자 전달 → 실제 조치 수행" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=10;fontColor=#7D7D7D;" vertex="1" parent="1">
+          <mxGeometry x="31" y="40" width="820" height="16" as="geometry" />
+        </mxCell>
+
+        <!-- ===== COLUMN CONTAINERS ===== -->
+        <mxCell id="colL" value="SolidStep · 연 단위 재점검 (보안센터)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#EAEAEA;verticalAlign=top;align=left;fontFamily=Arial;fontSize=10;fontStyle=1;fontColor=#464646;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="72" width="380" height="455" as="geometry" />
+        </mxCell>
+        <mxCell id="colR" value="EDR · 상시 이상징후 탐지" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#EAEAEA;verticalAlign=top;align=left;fontFamily=Arial;fontSize=10;fontStyle=1;fontColor=#464646;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="460" y="72" width="380" height="455" as="geometry" />
+        </mxCell>
+
+        <!-- ===== LEFT: SOLIDSTEP ===== -->
+        <mxCell id="a1" value="&lt;b&gt;보안센터 SolidStep 재점검&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;연 단위 정기 재점검&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="110" y="104" width="240" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ad" value="&lt;b&gt;조치 필요&lt;br&gt;사항?&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#D04A02;strokeColor=#D04A02;fontFamily=Arial;fontSize=10;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="175" y="172" width="110" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="an" value="&lt;b&gt;없음&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;차기 연간 재점검 대기&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7D7D7D;fontFamily=Arial;fontSize=9;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="180" width="115" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" value="&lt;b&gt;SKT 담당자에게 메일 전달&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;조치 필요사항 통보&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="110" y="256" width="240" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="&lt;b&gt;SKT 담당자 → Infra 운영자 전달&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;조치 요청 인계&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="110" y="314" width="240" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="&lt;b&gt;실제 조치 수행&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;Infra 운영자&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D04A02;strokeWidth=2;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="110" y="372" width="240" height="46" as="geometry" />
+        </mxCell>
+
+        <!-- ===== RIGHT: EDR ===== -->
+        <mxCell id="b1" value="&lt;b&gt;EDR 이상징후 발견&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;상시 탐지&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0301E;strokeWidth=2;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="530" y="104" width="240" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" value="&lt;b&gt;보안팀 공용 메일 알림&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;자동 알림 수신&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="530" y="176" width="240" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" value="&lt;b&gt;SKT / AX 담당자 메일 공지&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;해당 시스템 관리 담당자&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EAEAEA;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="530" y="244" width="240" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="b4" value="&lt;b&gt;실제 조치 수행&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;SKT / AX 담당자&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D04A02;strokeWidth=2;fontFamily=Arial;fontSize=10;fontColor=#000000;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="530" y="316" width="240" height="46" as="geometry" />
+        </mxCell>
+
+        <!-- ===== COMMON END ===== -->
+        <mxCell id="end" value="&lt;b&gt;조치 완료 · 관리 종료&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;color:#DDDDDD;&quot;&gt;결과 기록 · 상시/정기 재점검 순환&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#464646;strokeColor=#464646;fontFamily=Arial;fontSize=10;fontColor=#FFFFFF;fontStyle=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="320" y="560" width="240" height="48" as="geometry" />
+        </mxCell>
+
+        <!-- ===== EDGES ===== -->
+        <mxCell id="ea1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="a1" target="ad"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ean" value="없음" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7D7D7D;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=9;fontColor=#7D7D7D;" edge="1" parent="1" source="ad" target="an"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ea2" value="발견" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D04A02;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=9;fontStyle=1;fontColor=#D04A02;" edge="1" parent="1" source="ad" target="a2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ea3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="a2" target="a3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ea4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="a3" target="a4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="eb1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="b1" target="b2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="eb2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="b2" target="b3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="eb3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="b3" target="b4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="eend1" value="완료" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=9;fontColor=#464646;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a4" target="end"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="eend2" value="완료" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#464646;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Arial;fontSize=9;fontColor=#464646;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b4" target="end"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- ===== BUMPER ===== -->
+        <mxCell id="bumperbar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D04A02;strokeColor=#D04A02;" vertex="1" parent="1">
+          <mxGeometry x="40" y="632" width="5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bumper" value="&lt;b&gt;핵심:&lt;/b&gt; 방화벽 Open 이후에도 SolidStep 연 단위 재점검과 EDR 상시 탐지 두 축으로 지속 관리하며, 발견 시 담당자 전달을 거쳐 실제 조치까지 수행한다." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=10;fontColor=#2D2D2D;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="45" y="632" width="795" height="30" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
